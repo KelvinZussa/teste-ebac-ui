@@ -36,7 +36,7 @@ context('Funcionalidade Login', () => {
         })
     });
 
-    it('Deve exebir uma mensagem de erro ao inserir usuário inválidos', () => {
+    it('Deve exibir uma mensagem de erro ao inserir usuário inválidos', () => {
         cy.get('#username').type('aluno@teste.com')
         cy.get('#password').type('teste@teste')
         cy.get('.woocommerce-form > .button').click()
@@ -44,7 +44,7 @@ context('Funcionalidade Login', () => {
         cy.get('.woocommerce-error').should('contain', "Endereço de e-mail desconhecido. ")
     })
 
-    it('Deve exebir uma mensagem de erro ao inserir senha inválida', () => {
+    it('Deve exibir uma mensagem de erro ao inserir senha inválida', () => {
         cy.get('#username').type('aluno_ebac@teste.com')
         cy.get('#password').type('teste@teste')
         cy.get('.woocommerce-form > .button').click()
